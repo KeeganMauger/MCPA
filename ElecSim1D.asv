@@ -45,7 +45,6 @@ for t = 2:1000
         % Drift velocity
         v_total = v_total + v_prev(i);
     end
-    % Random Scattering
     
     % Drift Velocity
     v_drift = 1/N * v_total;
@@ -56,6 +55,7 @@ for t = 2:1000
         plot ([t-1 t],[x_prev(j) x(j)], "b")
         xlabel('Time')
         ylabel('Position')
+        title("Drift Velocity:"
 
         subplot(3,1,2);
         plot ([t-1 t],[v_prev(j) v(j)], "b")

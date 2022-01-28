@@ -48,6 +48,7 @@ for t = 2:1000
     
     % Drift Velocity
     v_drift = 1/N * v_total;
+    v_total = 0;
     
     for j = 1:N
         
@@ -55,11 +56,14 @@ for t = 2:1000
         plot ([t-1 t],[x_prev(j) x(j)], "b")
         xlabel('Time')
         ylabel('Position')
+        title("Drift Velocity: " + v_drift)
+        hold on
 
         subplot(3,1,2);
         plot ([t-1 t],[v_prev(j) v(j)], "b")
         xlabel('Time')
         ylabel('Velocity')
+        hold on
 
         subplot(3,1,3);
         plot ([x_prev(j) x(j)],[v_prev(j) v(j)], "b")
@@ -67,8 +71,7 @@ for t = 2:1000
         ylabel('Velocity')
 
         hold on
-        pause(0.1)
     end
-    
+    pause (0.1)
 end
 
