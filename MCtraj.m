@@ -6,6 +6,11 @@ function [] = MCtraj(type,nTraj)
     %close all
     
     % set(0,'DefaultFigureWindowStyle','docked')
+    
+    %----------------------------------------------------------------------
+    % run MCtraj(1,1) for 1 electron
+    %----------------------------------------------------------------------
+    
     global C
 
     addpath ../geom2d/geom2d
@@ -29,7 +34,7 @@ function [] = MCtraj(type,nTraj)
     MaxC = 10000;
     doPlot = 1;
 
-    V0 = 1000;
+    V0 = 1000;  % initial velocity
     g = 1;
     c = 2;
     dt = 1;
